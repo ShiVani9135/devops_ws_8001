@@ -27,9 +27,9 @@ jobs:
                   username: ${{ secrets.EC2_USER }}
                   key: ${{ secrets.EC2_SSH_KEY }}
                   script: |
-                      mkdir -p /home/${{ secrets.EC2_USER }}/backend
-                      sudo chown -R $USER:$USER /home/${{ secrets.EC2_USER }}/backend
-                      sudo chmod -R u+rwX /home/${{ secrets.EC2_USER }}/backend
+                      mkdir -p /home/${{ secrets.EC2_USER }}/devops_ws_8001
+                      sudo chown -R $USER:$USER /home/${{ secrets.EC2_USER }}/devops_ws_8001
+                      sudo chmod -R u+rwX /home/${{ secrets.EC2_USER }}/devops_ws_8001
 
             - name: Upload project to EC2 (SCP)
               uses: appleboy/scp-action@v0.1.7
@@ -38,20 +38,20 @@ jobs:
                   username: ${{ secrets.EC2_USER }}
                   key: ${{ secrets.EC2_SSH_KEY }}
                   source: .
-                  target: /home/${{ secrets.EC2_USER }}/backend
+                  target: /home/${{ secrets.EC2_USER }}/devops_ws_8001
                   overwrite: true
 
             - name: Deploy on EC2
               uses: appleboy/ssh-action@v1.0.3
               env:
-                  APP_DIR: /home/${{ secrets.EC2_USER }}/backend
+                  APP_DIR: /home/${{ secrets.EC2_USER }}/devops_ws_8001
               with:
                   host: ${{ secrets.EC2_HOST }}
                   username: ${{ secrets.EC2_USER }}
                   key: ${{ secrets.EC2_SSH_KEY }}
                   script_stop: true
                   script: |
-                      cd /home/${{ secrets.EC2_USER }}/backend
+                      cd /home/${{ secrets.EC2_USER }}/devops_ws_8001
 
                       python3 -m venv .venv || true
                       source .venv/bin/activate
@@ -60,6 +60,6 @@ jobs:
                       python -m pip install --upgrade pip
                       pip install -r requirements.txt
 
-                      fuser -k 8000/tcp || true
-                      nohup python manage.py runserver 0.0.0.0:8000 > logs.out 2>&1 &
+                      fuser -k 8001/tcp || true
+                      nohup python manage.py runserver 0.0.0.0:8001 > logs.out 2>&1 &
                       echo "✅ Deployment complete and server restarted!"
