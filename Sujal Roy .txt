@@ -1,0 +1,56 @@
+Github steps:-
+
+step 1:- Create a git hub account with your credential 
+
+step 2:- Make a repository
+
+step 3:- Download git in your local device and add your git hub email and your name using "git config --global user.email "your@email" , git config --global user.name "name"" and then authenthicate your git bash with your git hub
+
+step 4:- Open git bash and clone your repository in to your local deivce
+
+step 5:- After cloning the repo paste your local code and then check the status of your git by using "Git status"
+
+step 6:- After checking status use "git add ." command to prep your code to upload on the git hub
+
+step 7:- After adding code use "git commit -m "some message" " to commit your changes in your localrepo
+
+step 8:- After commiting use "git checkout -b main" to create a branch in your repo
+
+step 9:- After commiting use "git push -u origin main" to push your code on git hub.
+
+CI/CD pipeline steps:-
+
+Prerequisites for ci/cd pipeline:-
+
+.) You have your local code with the yaml file.
+
+.) AWS EC2 instance
+
+step 1:- Push your local code on your git hub repo
+
+step 2:- Configure the git hub secrets in the setting of your git hub(git hub actions)
+
+a)EC2_HOST:- ipv4 address of your EC2 instance
+b)EC2_USER:- user name of your EC2 instance
+c)EC2_SSH_KEY:- the .pem file of your instance
+
+Step 3:- After doing the steps witten above check the actions in your action tab of github to check whether there is an any issue there or not and if there is any issue resolve it and push your code again on the github.4
+
+EC2 Instance making step :-
+
+1)Open the AWS Management Console and sign in
+
+2)In the search bar type EC2 and open the EC2 dashboard
+
+3)Click on the option Launch Instance
+
+4)Enter a name for your instance
+
+5)Choose an Amazon Machine Image such as Amazon Linux or Ubuntu (e.g:- Amazon linux 2023 kernel-6.1AMI)
+
+6)Select an instance type according to your need like t3 micro for free tier
+
+7)After the Instance type configure a key pair which is a .pem file which is needed for login in the instance (new ones have to create a key)
+
+8)Choose network and subnet settings as needed and allow all the http and https taffic
+ 
