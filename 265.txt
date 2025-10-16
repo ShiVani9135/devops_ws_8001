@@ -1,0 +1,40 @@
+
+# create a repository in dev ops
+create a account on git hub
+create a repo devops
+git clone url
+add all the code to main branch
+git status -untracked
+git add .
+git commit -m""
+git push -u origin main
+
+# run it in python
+open the cmd files where files
+check python --version
+create virtual enviorment (env) : python -m venv env
+
+
+
+#create ec2
+#create ec2-
+1>go to search area search ec2
+2>click on the virtual sever ec2 
+3>clickon the launch instance
+4>follow the steps to create and instance
+ create the name of the server
+ selection of os ubuntu 
+select machiene image(free tier)
+select instance type
+
+
+prereqisite of ci/cd pipeline
+1.>development code along with .yml file
+2>aws instance ec2
+
+step 1
+push our local development code to the git repo
+2>
+we have to configure the secrets in the settings of git hub (ec2 host,ec2user,sshkey)
+3>
+
