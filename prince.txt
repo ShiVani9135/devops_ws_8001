@@ -1,0 +1,42 @@
+GitHub Steps :
+Create a github account .
+Create a repository and copy its repo url.
+Download the gitbash so that you can clone the repo.
+Open the gitbash on your folder .
+Run command : git clone <repo url>
+Run : ls command
+Run : cd <dir name>
+Run : git status
+Run : git checkout -b ‘ New Branch name’
+Run : git add file.txt  (to push specific file)
+Run : git add . (to push all file)
+Run : git commit -m ‘any message ‘
+Run : git push (for the first time push system will give a command to push run that command to push in git )
+Run : git status
+
+CI/CD Pipeline Steps :
+We have to create a “yaml ” file in which we will configure all the automation steps which need to be executed
+Pre Requisites :
+Development code with yaml file.
+AWS instance EC2
+Step 1:
+We have to push on local development code to repo
+Step 2 :
+We have to configure the secrets in settings of that repo in the github
+a.	EC2_HOST (IP address of instance )
+b.	EC2_USER (ubuntu)
+c.	EC2_SSH_KEY (RSA private key of .pem file of keypair key from instance)
+
+AWS Steps :
+Login your AWS account.
+Search EC2.
+Click on EC2.
+ Click on the launch instance .
+Type the name of your Instance .
+Select the OS (Ubuntu)
+AMI processor 
+Create a keypair key (name of the keypair)
+Select RSA and create keypair key
+Open the cmd where you stored that .pem file (keypair key ) and run the command : ssh -i (.pem file name ) ubuntu@<ip address of instance >
+
+After that check the github repo < actions , deployment is successful or not  .
