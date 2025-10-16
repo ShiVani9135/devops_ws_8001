@@ -1,0 +1,47 @@
+# Ritesh-kumar-2028.
+
+1. All Git Steps:
+      a. Download Git hub [https://git-scm.com/downloads] on your local machine.
+      b. create a git hub account.
+      c. $ git config --global user.name "John Doe".
+      d. $ git config --global user.email johndoe@example.com.
+      e. create a new repo on your GitHub.
+      f. open git bash.
+      g. cd into your desire directory as cd (directory).
+      h. Now  git clone (now copied the url).
+      i.change your database.
+      j.git status ( to check the database from your current satatus).
+      i.git add ( To add file name and change your stages).
+      j.git add . (To change the stages of all ).
+      k.git commit (To  all save changes from " form git commit command").
+      l.git push ( to sync all changes to git hub).
+
+2.     All Ec2 steps:
+        a. To create aws account.
+        b. Go to search bar.
+        c. Searh for Ec3 select it.
+        d. create a new launch for Ec2 instance.
+        e. create a name for your instance name.
+        f. select oS ubuntu.
+        g. Select AMI.
+        h. select instance type.
+        i.  key pair.
+           1. create a existing or 
+           2 create a new.
+        j. select network option.
+        k. to select storage option.
+        l. go to domain setting.
+        m. to launch.
+
+3.       select GitHub Action
+
+          a. Go to your git repo.(cd <git/repo).
+          b. create a folder as (mkdir. github/workflow).
+          c. cd into the newly created directory (cd .github/workflow).
+          d. create a (.yaml) file.
+          e. commit the changes.
+          f. push the changes.
+
+         
+
+
