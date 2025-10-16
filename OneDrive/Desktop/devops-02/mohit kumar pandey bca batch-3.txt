@@ -1,0 +1,63 @@
+Test of DevOps workshop
+1.All steps of github
+2.All steps of EC2 
+3.All steps of github action(CI/CD) pipeline
+
+
+1.All steps of github
+:)if you are not connect your git then you need to configure with this code 
+(git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com")
+
+(a)git clone (URL)
+(b)add all the code to the main branch
+(c)git status
+(d)git add .  Or you can use git add file name (if you change in a particular file)
+(e)git commit -m "MSG about changes"
+(f)git push
+2.steps 
+(a) open the cmd where files
+(b) check python --version
+(c) create virtual env : python -m venv env
+(d) activate venv : env\Scripts\activate.bat
+(e) Install all python packages :
+(f) python -m pip install -r requirements.txt
+(g) Run server : python manage.py runserver
+
+
+2.All steps of EC2 
+(a) sign in into aws account
+(b) go to searchbar and type EC2
+(c) click EC2
+(d) click launch instance
+(e) give instance name like myserver
+(f) choose AMI ubuntu windows etc.
+(g) choose instance type like t2.micro
+(h) create new key pair if you don't have download .pem file
+(i) add rules (ssh (for connecting via terminal )
+              (HTTP (for hosting website))
+              (HTTPS (for usong ssl))
+(j) click launch instance ->select your instance ->connect
+
+3.All steps of github action(CI/CD) pipeline	
+(a) open git repo ->setting ->secrects and variable ->action
+ 
+ | Secret Name | Description                                |
+| ----------- | ------------------------------------------ |
+| `EC2_HOST`  | Your EC2 public IP                         |
+| `EC2_USER`  | Usually `ubuntu` (for Ubuntu AMI)          |
+| `EC2_KEY`   | Paste the contents of your `.pem` key file |
+
+  Now just push the code to main branch 
+  
+  git add .
+  git commit -m "update"
+  git push origin main
+  
+  
+
+
+
+
+  
+
