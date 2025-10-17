@@ -4,7 +4,7 @@ By SHEERSH BScIT B1 3RD YR 26
 Git Steps:
 Firstly We have to make GitHub account using our email 
 Then we will create a repository named abc(naming this repo as an example) and then setting visibility
-as public without adding readme file and keep rest 
+as public without adding readme file and keep rest of the options as it is
 Then we have to install Git Bash in our local machine
 Then we have to open a new folder(example-abc) and we have to click the right part of the
 cursorpad or mouse then an option of 
